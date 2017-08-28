@@ -1,0 +1,20 @@
+---
+- hosts: all
+  tasks:
+  - name: Upgrade all packages
+    yum: name=* state=latest
+
+  - name: Ensure git is installed
+    yum: >
+      state=present
+      pkg=git
+
+  - name: Ensure curl is installed
+    yum: >
+      state=present
+      pkg=git
+
+  - name: Ensure vim is installed
+    yum: >
+      state=present
+      pkg=vim
